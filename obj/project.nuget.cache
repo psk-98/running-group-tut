@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8lH+F5oNH3kMdTtsIIBeYHFqzADLdjIfvZ7pyIRurNM372KFwLRyww6lpF3Jm4BgHSzRYMroeZH3YxuJHiOscQ==",
+  "success": true,
+  "projectFilePath": "/home/omen/Documents/CsharpProjects/running-apps/running-apps.csproj",
+  "expectedPackageFiles": [
+    "/home/omen/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.33/microsoft.netcore.app.host.linux-x64.6.0.33.nupkg.sha512"
+  ],
+  "logs": []
+}

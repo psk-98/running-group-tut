@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/omen/Documents/CsharpProjects/running-apps/running-apps.csproj": {}
+  },
+  "projects": {
+    "/home/omen/Documents/CsharpProjects/running-apps/running-apps.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/omen/Documents/CsharpProjects/running-apps/running-apps.csproj",
+        "projectName": "running-apps",
+        "projectPath": "/home/omen/Documents/CsharpProjects/running-apps/running-apps.csproj",
+        "packagesPath": "/home/omen/.nuget/packages/",
+        "outputPath": "/home/omen/Documents/CsharpProjects/running-apps/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/omen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/home/omen/Documents/.net-microservice-course/packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[6.0.33, 6.0.33]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
