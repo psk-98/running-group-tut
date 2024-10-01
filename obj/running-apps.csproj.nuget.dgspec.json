@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vetro\\Documents\\csharp_projects\\running-group-tut\\running-apps.csproj": {}
+    "/home/omen/Documents/web-dev/running-group-tut/running-apps.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vetro\\Documents\\csharp_projects\\running-group-tut\\running-apps.csproj": {
+    "/home/omen/Documents/web-dev/running-group-tut/running-apps.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vetro\\Documents\\csharp_projects\\running-group-tut\\running-apps.csproj",
+        "projectUniqueName": "/home/omen/Documents/web-dev/running-group-tut/running-apps.csproj",
         "projectName": "running-apps",
-        "projectPath": "C:\\Users\\vetro\\Documents\\csharp_projects\\running-group-tut\\running-apps.csproj",
-        "packagesPath": "C:\\Users\\vetro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vetro\\Documents\\csharp_projects\\running-group-tut\\obj\\",
+        "projectPath": "/home/omen/Documents/web-dev/running-group-tut/running-apps.csproj",
+        "packagesPath": "/home/omen/.nuget/packages/",
+        "outputPath": "/home/omen/Documents/web-dev/running-group-tut/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vetro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/omen/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "/home/omen/Documents/.net-microservice-course/packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,11 +33,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -47,7 +43,13 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[6.0.0, )"
             }
@@ -63,6 +65,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[6.0.33, 6.0.33]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -71,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/RuntimeIdentifierGraph.json"
         }
       }
     }

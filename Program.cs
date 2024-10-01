@@ -1,13 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using running_apps.Data;
+using running_apps.Interfaces;
+using running_apps.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IClubRepository, ClubRepository>();
+builder.Services.AddScoped<IRaceRepository, RaceRepository>();
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnectionString"));
 });
 
 var app = builder.Build();
