@@ -27,5 +27,20 @@ public class RaceController : Controller
 
         return View(race);
     }
+
+    public async Task<IActionResult> Create()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create(Race race)
+    {
+        if (!ModelState.IsValid) return View(race);
+
+        _raceRepo.Add(race);
+
+        return RedirectToAction(nameof(Index));
+    }
 }
 

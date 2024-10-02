@@ -1,17 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using running_apps.Data;
 using running_apps.Interfaces;
 using running_apps.Models;
+using running_apps.ViewModels;
 
 namespace running_apps.Controllers;
 
 public class ClubController : Controller
 {
     private readonly IClubRepository _clubRepo;
-    public ClubController(IClubRepository clubRepo)
+    private readonly IPhotoService _photoService;
+    public ClubController(IClubRepository clubRepo, IPhotoService photoService)
     {
         _clubRepo = clubRepo;
+        _photoService = photoService;
     }
 
     // GET: ClubController
@@ -35,12 +39,29 @@ public class ClubController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(Club club)
+    public async Task<IActionResult> Create(CreateClubViewModel clubVM)
     {
-        if (!ModelState.IsValid) return View(club);
+        if (!ModelState.IsValid)
+        {
+            var result = await _photoService.UploadPhotoAsync(clubVM.Image);
 
-        _clubRepo.Add(club);
-        return RedirectToAction(nameof(Index));
+            var club = new Club
+            {
+                Title = clubVM.Title,
+                Image = result.Url.ToString(),
+                Description = clubVM.Description,
+                // AddressId = clubVM.AddressId,
+                ClubCategory = clubVM.ClubCategory
+            };
+
+            _clubRepo.Add(club);
+            return RedirectToAction(nameof(Index));
+
+
+        }
+        else ModelState.AddModelError("", "Photo upload failed");
+
+        return View(clubVM);
     }
 }
 
